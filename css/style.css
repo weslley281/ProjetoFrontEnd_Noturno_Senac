@@ -1,36 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
 }
 
-body{
-    padding: 0 15px 0 15px;
-    margin-left: 100px;
-    margin-right: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+body {
     padding: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
 }
 
-input{
-    background-color: whitesmoke;
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 5px;
 }
 
-textarea{
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.col-lg-4 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex-basis: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.banner {
+    border-radius: 10px;
     width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
+    height: auto;
+    max-height: 500px;
 }
 
 button{
@@ -43,4 +54,25 @@ button{
     color: white;
     font-weight: bolder;
     font-size: 1rem;
+}
+
+button:hover{
+    background-color: rgb(23, 57, 23);
+    cursor: pointer;
+}
+
+.card-1 h3{
+    color: crimson;
+}
+
+.card-2 h3{
+    color: blueviolet;
+}
+
+.card-3 h3{
+    color: purple;
+}
+
+.container img {
+    border-radius: 15px
 }

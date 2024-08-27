@@ -11,6 +11,55 @@ body {
     border-radius: 15px;
 }
 
+header {
+
+}
+
+nav h1{
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    margin: 1.5rem 0;
+    padding: 0.7rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    padding: 1rem 1.5rem;
+    background-color: aquamarine;
+    border-radius: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+    background-color: aqua;
+    text-decoration: underline;
+}
+
+nav .row{
+    width: 100%;
+}
+
+nav .row .col-1{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+nav .row .col-2{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    gap: 0.5rem;
+}
+
 .container {
     display: flex;
     justify-content: space-around;

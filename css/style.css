@@ -108,13 +108,14 @@ nav .row .col-2{
     margin: 10px 0;
     flex-grow: 1;
     text-align: center;
-    width: 100%; /* Por padrão, os cartões ocupam 100% da largura */
+    width: calc(33.33 - 20px);
+    box-sizing: border-box;
 }
 
 @media (min-width: 769px) {
     .col-lg-4 {
-        flex-basis: 30%; /* Nos dispositivos maiores, eles ocupam 30% */
-        width: auto; /* Permite que os cartões ocupem a largura necessária */
+        flex-basis: 30%;
+        width: auto;
     }
 }
 
@@ -175,6 +176,18 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+article {
+    background-color: darkblue;
+    color: yellow;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+article h2 {
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {

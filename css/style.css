@@ -179,11 +179,17 @@ footer {
 }
 
 article {
-    background-color: darkblue;
+    background-image: url("https://cdn.pixabay.com/photo/2021/05/17/13/11/cygnet-6260741_1280.jpg");
+    background-position: center;
+    background-size: 100%;
+
     color: yellow;
+    font-size: 1.3rem;
+    
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
+    height: 400px;
 }
 
 article h2 {

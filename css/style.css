@@ -9,7 +9,6 @@
     max-width:1200px;
     box-shadow:0 4px 8px #0003;
     border-radius:15px;
-    width:100%
     }
     
     @media (max-width: 768px) {
@@ -168,6 +167,10 @@
     .card-3 h3 {
     color:purple
     }
+
+    img {
+        border-radius: 0.5rem;
+    }
     
     .container img {
     border-radius:15px;
@@ -236,4 +239,25 @@
     font-size:.9rem;
     padding:.5rem
     }
+
+}
+
+    .img-consulta {
+        width: 100%;
+    }
+    
+    .consulta .row .col {
+        padding: 0.5rem;
+        width: 48%;
+
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .consulta {
+        background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://cdn.pixabay.com/photo/2019/04/03/03/05/medical-equipment-4099428_1280.jpg");
+        background-size: cover;
+
     }

@@ -9,6 +9,7 @@
     max-width:1200px;
     box-shadow:0 4px 8px #0003;
     border-radius:15px;
+    font-family: "Roboto", sans-serif;
     }
     
     @media (max-width: 768px) {
@@ -106,10 +107,11 @@
     }
     
     .row {
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:nowrap;
-    gap:20px
+        margin: 1rem;
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:nowrap;
+        gap:20px
     }
     
     .col-lg-4 {
@@ -246,11 +248,15 @@
         width: 100%;
     }
     
-    .consulta .row .col {
+    .row .col {
         padding: 0.5rem;
         width: 48%;
 
         font-size: 1.2rem;
+        border-radius: 0.5rem;
+    }
+
+    .consulta .row .col{
         text-align: center;
     }
 
@@ -278,4 +284,64 @@
 
     .consulta a:hover {
         background-color: greenyellow;
+    }
+
+    .especialidades {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .especialidades img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .especialidades .row {
+        gap: 3rem;
+    }
+
+    .especialidades .row .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: whitesmoke;
+        height: 350px;
+        padding: 0 2.2rem;
+        box-shadow:0 4px 8px #0003;
+    }
+
+    .especialidades .item {
+        margin-top: 1rem;
+    }
+
+    .especialidades .item h2 {
+        font-size: 1.2rem;
+    }
+
+    .especialidades .item p {
+        font-size: 1rem;
+    }
+
+    .especialidades .titulo {
+        background-color: #7fffd4;
+        display: inline-block;
+        padding: 0.25rem 5rem;
+        margin: 2rem 0 0 0.5rem;
+        border-radius: 3rem;
+        background-image: linear-gradient(to right, greenyellow, aqua);
+
+        color: whitesmoke;
+        font-size: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+        .especialidades .row{
+            display: block;
+        }
+        .especialidades .row .col{
+            width: 90%;
+            margin: 2rem;
+        }
     }

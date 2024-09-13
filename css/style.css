@@ -4,20 +4,85 @@
     }
     
     body {
-    padding:30px;
-    margin:0 auto;
-    max-width:1200px;
-    box-shadow:0 4px 8px #0003;
-    border-radius:15px;
-    font-family: "Roboto", sans-serif;
+        padding:30px;
+        margin:0 auto;
+        max-width:1200px;
+        box-shadow:0 4px 8px #0003;
+        border-radius:15px;
+        font-family: "Roboto", sans-serif;
     }
     
     @media (max-width: 768px) {
-    body {
-    padding:15px;
-    box-shadow:none;
-    border-radius:0
+        body {
+            padding:15px;
+            box-shadow:none;
+            border-radius:0
+        }
     }
+
+    table {
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #d3d3d3;
+        border-radius: 5px;
+        padding: 1em;
+        border-collapse: separate;
+    }
+
+    tr {
+        display: block;   
+    }
+
+    th {
+        text-align: left;
+    }
+
+
+    td { 
+        border-radius: 2px;
+    }
+
+    th, td {
+        width: 100px;
+        border-bottom: solid 1px #d3d3d3;
+        padding: 1em 0.5em;
+        border-radius: 5px;
+    }
+
+    tr td:first-child, tr th:first-child {
+        width: 60%;
+    }
+
+    tr td:last-child {
+        background-color: #d3d3d3;
+    }
+
+    thead tr:first-child {
+        background-color: #d3d3d3;
+        color: white;
+        font-weight: bolder;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        table {
+            font-size: 0.8em;
+        }
+
+        tr {
+            width: 100%;
+        }
+
+        th, td {
+            width: 20%;
+            border-bottom: solid 1px #d3d3d3;
+            padding: 1em 0.5em;
+            border-radius: 5px;
+        }
+    
+        tr td:last-child {
+            width: 60%;
+        }
     }
     
     nav {
@@ -32,13 +97,13 @@
     }
     
     nav a {
-    text-decoration:none;
-    color:#000;
-    font-weight:bolder;
-    padding:1rem 1.5rem;
-    background-color:#7fffd4;
-    border-radius:15px;
-    transition:color .3s
+        text-decoration:none;
+        color:#000;
+        font-weight:bolder;
+        padding:1rem 1.5rem;
+        background-color:#7fffd4;
+        border-radius:15px;
+        transition:color .3s
     }
     
     nav a:hover {
@@ -98,6 +163,21 @@
     main figure figcaption {
         padding:0 10px
     }
+
+    .tabelas .titulos {
+        height: 100px;
+    }
+
+    @media (max-width: 768px) {
+        .tabelas .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tabelas .row .col {
+            width: 100%;
+        }
+    }
     
     .container {
         justify-content:space-between;
@@ -119,10 +199,6 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-    }
-
-    .container .row .col-lg-4 figure {
-        
     }
     
     .container .row .col-lg-4 {

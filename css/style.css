@@ -164,6 +164,34 @@
         padding:0 10px
     }
 
+    form {
+        display: block;
+    }
+
+    form div{
+        margin: 1rem;
+    }
+
+    form div label {
+        font-weight: bolder;
+    }
+
+    form div input, textarea{
+        width: 100%;
+        padding: 0.75rem 0.5rem;
+    }
+
+    form div input {
+        border: none;
+        border-bottom: solid 0.1rem black;
+    }
+
+    form div textarea {
+        border: solid 0.1rem black;
+        border-radius: 0.4rem;
+
+    }
+
     .tabelas .titulos {
         height: 100px;
     }
@@ -453,4 +481,9 @@
             width: 90%;
             margin: 2rem;
         }
+    }
+
+    video {
+        width: 100%;
+        border-radius: 0.5rem;
     }

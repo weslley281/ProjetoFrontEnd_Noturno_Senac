@@ -5,287 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferraz Consultorio Medico Especializado</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Fontes e Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datatables.css">
 </head>
 <body>
-    <header> 
-        <nav>
-            <div class="row">
-                <div class="col-1">
-                    <img src="https://cdn.pixabay.com/photo/2017/07/21/08/33/painkillers-2525089_1280.jpg"  alt="">
-                    <h1>Ferraz Consultorio Medico Especializado</h1>
-                </div>
-                <div class="col-2">
-                    <a href="index.html">Home</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="#blog">Blog</a>
-                </div>
-            </div>   
-        </nav>
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-light py-3">
+        <nav class="d-flex navbar justify-content-start align-items-center navbar-light bg-light navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                    <img src="https://cdn.pixabay.com/photo/2017/07/21/08/33/painkillers-2525089_1280.jpg" alt="Consultório" class="img-fluid" style="max-width: 150px;">
+                    <h1 class="h4 mt-2">Ferraz Consultório Médico Especializado</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#especialidades">Destaques</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#precos">Preços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                  </li>
+                </li>
+              </ul>
+            </div>
+          </nav>
     </header>
-    
-    <main>
+
+    <!-- Banner Principal -->
+    <main class="container my-5">
         <figure>
-            <img class="banner" src="https://fcmsantacasasp.edu.br/blog/wp-content/uploads/2022/03/especialista-ou-generalista.jpg" alt="medicos">
-            <figcaption>Lorem Ipsum é simplesmente um texto modelo da indústria tipográfica e de impressão</figcaption>
+            <img class="img-fluid rounded" src="https://fcmsantacasasp.edu.br/blog/wp-content/uploads/2022/03/especialista-ou-generalista.jpg" alt="Médicos">
+            <figcaption class="mt-2 text-center">Lorem Ipsum é simplesmente um texto modelo da indústria tipográfica e de impressão</figcaption>
         </figure>        
     </main>
 
-    <div class="container">
-        <div class="row">
-            <div class="card-1 col-lg-4">
-                <figure>
-                    <img src="images/cardio.png" alt="medicos">
-                    <figcaption>Cardiologia</figcaption>
-                </figure>
-
-                <br>
-
-                <h3>Cardiologista</h3>
-                <p>O medico do coracao ao palmo da sua mao, fique tranquilo com a sua saude cardio vascular. Consultas apartir de R$ 140,00</p>
-
-                <button>Agendar</button>
+    <!-- Cartões de Serviços -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center">
+                    <img src="images/cardio.png" class="card-img-top" alt="Cardiologia">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiologista</h5>
+                        <p class="card-text">O médico do coração ao alcance de suas mãos. Consultas a partir de R$ 140,00.</p>
+                        <a href="#" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-2 col-lg-4">
-                <figure>
-                    <img src="images/endro.jpg"  alt="medicos">
-                    <figcaption>Endroquinologia</figcaption>
-                </figure>
-
-                <br>
-
-                <h3>Endroquinologista</h3>
-                <p>AO medico dos hormonios, para tratar a sua diabetes, tireoide, baixa textosteron, reposicao hormonal e mais...</p>
-
-                <button>Agendar</button>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center">
+                    <img src="images/endro.jpg" class="card-img-top" alt="Endocrinologia">
+                    <div class="card-body">
+                        <h5 class="card-title">Endocrinologista</h5>
+                        <p class="card-text">Trate a sua diabetes, tireoide e reposição hormonal. Consultas acessíveis.</p>
+                        <a href="#" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-3 col-lg-4">
-                <figure>
-                    <img class="img-card" src="images/clinico.jpg" alt="medicos">
-                    <figcaption>Clinica</figcaption>
-                </figure>
-
-                <br>
-
-                <h3>Clinico Geral</h3>
-                <p>O medico certo para voce que nao sabe o problema que tem, ele pode ele mesmo te tratar se for algo basico ou te indicar para o especialista correto.</p>
-
-                <button>Agendar</button>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center">
+                    <img src="images/clinico.jpg" class="card-img-top" alt="Clínico Geral">
+                    <div class="card-body">
+                        <h5 class="card-title">Clínico Geral</h5>
+                        <p class="card-text">O médico certo para você que precisa de um diagnóstico preciso.</p>
+                        <a href="#" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <article>
-        <h2>Onde posso arranjar algum?</h2>
-        <p>
-            Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias que nem sequer parecem suficientemente credíveis. Se vai usar uma passagem do Lorem Ipsum, deve ter a certeza que não contém nada de embaraçoso escondido no meio do texto. Todos os geradores de Lorem Ipsum na Internet acabam por repetir porções de texto pré-definido, como necessário, fazendo com que este seja o primeiro verdadeiro gerador na Internet. Usa um dicionário de 200 palavras em Latim, combinado com uma dúzia de modelos de frases, para gerar Lorem Ipsum que pareçam razoáveis. Desta forma, o Lorem Ipsum gerado é sempre livre de repetição, ou de injecção humorística, etc.
-        </p>
-    </article>
-
-    <div class="consulta">
-        <div class="row">
-            <div class="col">
-                <figure>
-                    <img class="img-consulta" src="images/apontando-sem-fundo.png" alt="medicos">
-                </figure>
+    <!-- Seção de Agendamento -->
+    <section class="container py-5 bg-light">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center">
+                <img class="img-fluid" src="images/apontando-sem-fundo.png" alt="Agendamento">
             </div>
-            <div class="col back-consulta">
+            <div class="col-lg-6">
                 <h2>Agende a sua consulta</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit architecto voluptas dolores. Hic necessitatibus, eos ipsa doloribus quasi dignissimos voluptatem ipsum iure voluptates explicabo quas illo asperiores quaerat laudantium id!
-                </p>
-                
-                <a href="http://" target="_blank" rel="noopener noreferrer">Agendar</a>
-            </div>     
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic necessitatibus, eos ipsa doloribus dignissimos.</p>
+                <a href="#" class="btn btn-success">Agendar</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="especialidades">
-        <div class="titulo">
-            <h2>Nossas Especialidades!</h2>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="item">
-                    <img src="images/user-doctor-solid.svg" alt="">
-                </div>
-                <div class="item">
-                    <h2>Consulta Online</h2>
-                </div>
-                <div class="item">
+    <!-- Seção de Especialidades -->
+    <section id="especialidades" class="container my-5">
+        <h2 class="text-center">Nossas Especialidades!</h2>
+        <div class="row text-center g-4 mt-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="p-3 border rounded">
+                    <img src="images/user-doctor-solid.svg" alt="Consulta Online" width="60">
+                    <h3 class="mt-2">Consulta Online</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-            <div class="col">
-                <div class="item">
-                    <img src="images/clock-solid.svg" width="60px" height="60px" alt="">
-                </div>
-                <div class="item">
-                    <h2>Agendamento Online 24h</h2>
-                </div>
-                <div class="item">
+            <div class="col-lg-4 col-md-6">
+                <div class="p-3 border rounded">
+                    <img src="images/clock-solid.svg" alt="Agendamento 24h" width="60">
+                    <h3 class="mt-2">Agendamento Online 24h</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-            <div class="col">
-                <div class="item">
-                    <img src="images/stethoscope-solid.svg" width="60px" height="60px" alt="">
-                </div>
-                <div class="item">
-                    <h2>Atendimento de Qualidades</h2>
-                </div>
-                <div class="item">
+            <div class="col-lg-4 col-md-6">
+                <div class="p-3 border rounded">
+                    <img src="images/stethoscope-solid.svg" alt="Atendimento de Qualidade" width="60">
+                    <h3 class="mt-2">Atendimento de Qualidade</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="tabelas">
+    <!-- Tabelas de Especialidades e Exames -->
+    <section id="precos" class="container mb-5">
         <div class="row">
-            <div class="col">
-                <div class="titulos">
-                    <h2>São mais de 60 especialidades disponíveis</h2>
-                </div>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>
-                                Especialidades
-                            </th>
-                            <th>
-                                Particular
-                            </th>
-                            <th>
-                                Pax
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Cardiologia
-                            </td>
-                            <td>
-                                R$ 110,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Clínico Geral
-                            </td>
-                            <td>
-                                R$ 120,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Dermatologia
-                            </td>
-                            <td>
-                                R$ 110,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Ginecologia
-                            </td>
-                            <td>
-                                R$ 120,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Neurologia
-                            </td>
-                            <td>
-                                R$ 160,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Nutricionista
-                            </td>
-                            <td>
-                                R$ 110,00
-                            </td>
-                            <td>
-                                R$ 50,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Oftalmologia
-                            </td>
-                            <td>
-                                R$ 120,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Psicólogo
-                            </td>
-                            <td>
-                                R$ 110,00
-                            </td>
-                            <td>
-                                R$ 50,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Psiquiatria
-                            </td>
-                            <td>
-                                R$ 150,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td>
-                                Urologia
-                            </td>
-                            <td>
-                                R$ 150,00
-                            </td>
-                            <td>
-                                R$ 70,00*
-                            </td>
-                        </tr> 
-                    </tbody>
-                </table>
+            <div class="col-lg-6">
+                <h2>Especialidades</h2>
+                <table id="table1" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Especialidades
+                                </th>
+                                <th>
+                                    Particular
+                                </th>
+                                <th>
+                                    Pax
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Cardiologia
+                                </td>
+                                <td>
+                                    R$ 110,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Clínico Geral
+                                </td>
+                                <td>
+                                    R$ 120,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Dermatologia
+                                </td>
+                                <td>
+                                    R$ 110,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Ginecologia
+                                </td>
+                                <td>
+                                    R$ 120,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Neurologia
+                                </td>
+                                <td>
+                                    R$ 160,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Nutricionista
+                                </td>
+                                <td>
+                                    R$ 110,00
+                                </td>
+                                <td>
+                                    R$ 50,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Oftalmologia
+                                </td>
+                                <td>
+                                    R$ 120,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Psicólogo
+                                </td>
+                                <td>
+                                    R$ 110,00
+                                </td>
+                                <td>
+                                    R$ 50,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Psiquiatria
+                                </td>
+                                <td>
+                                    R$ 150,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>
+                                    Urologia
+                                </td>
+                                <td>
+                                    R$ 150,00
+                                </td>
+                                <td>
+                                    R$ 70,00*
+                                </td>
+                            </tr> 
+                        </tbody>
+                    </table>
             </div>
-            <div class="col">
-                <div class="titulos">
-                    <h2>Descontos de até 80% em exames laboratoriais e de imagem</h2>
-                </div>
-                
-                <table>
+            <div class="col-lg-6">
+                <h2>Exames Laboratoriais</h2>
+                <table id="table2" class="table table-striped">
                     <thead>
                         <tr>
                             <th>
@@ -414,41 +393,56 @@
                 </table>
             </div>
         </div>
-    </div>
+    </section>
 
-    <form action="" method="post">
-        <div>
-            <label for="name">Nome: </label>
-            <input type="text" id="name" name="name" placeholder="Digite o nome completo" required>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Assista ao Nosso Vídeo</h2>
+        <div class="ratio ratio-16x9">
+            <video class="w-100" controls muted autoplay loop>
+                <source src="images/eu.mp4" type="video/mp4">
+                Seu navegador não suporta o vídeo.
+            </video>
         </div>
-        <div>
-            <label for="email">Email: </label>
-            <input type="text" id="email" name="email" placeholder="Digite o seu melhor email" required>
-        </div>
-        <div>
-            <label for="message">Mensagem: </label>
-            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-        </div>
-            <button type="submit">Enviar</button>
-        <div>
-    </form>
+    </section>
+    
+    
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>O Weslley eh foda pra caralho</h2>
+    <!-- Formulário de Contato -->
+    <section id="contato" class="container mb-5">
+        <h2>Entre em Contato</h2>
+        <form action="" method="post" class="row g-3">
+            <div class="form-group col-md-6">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Digite o nome completo" required>
             </div>
-            <div class="col">
-                <video controls muted autoplay loop>
-                    <source src="images/eu.mp4" type="video/mp4">
-                    Seu navegador nao suporta a tag video.
-                </video>
+            <div class="form-group col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu melhor email" required>
             </div>
-        </div>
-    </div>
+            <div class="form-group col-12">
+                <label for="message" class="form-label">Mensagem</label>
+                <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <div class="form-group col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Informações do site. Todos os direitos reservados.</p>
+    <!-- Rodapé -->
+    <footer class="container py-4 border-top">
+        <p class="text-center">&copy; 2023 Consultório Médico Ferraz. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/datatables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table1').DataTable();
+            $('#table2').DataTable();
+        });
+    </script>
 </body>
 </html>
+

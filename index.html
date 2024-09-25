@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/datatables.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Cabeçalho e Navegação -->
@@ -55,7 +56,7 @@
     <section class="container mb-5">
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="card h-100 text-center">
+                <div class="card h-100 text-center px-2 py-2">
                     <img src="images/cardio.png" class="card-img-top" alt="Cardiologia">
                     <div class="card-body">
                         <h5 class="card-title">Cardiologista</h5>
@@ -408,26 +409,28 @@
     
 
     <!-- Formulário de Contato -->
-    <section id="contato" class="container mb-5">
-        <h2>Entre em Contato</h2>
-        <form action="" method="post" class="row g-3">
-            <div class="form-group col-md-6">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Digite o nome completo" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu melhor email" required>
-            </div>
-            <div class="form-group col-12">
-                <label for="message" class="form-label">Mensagem</label>
-                <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
-            </div>
-            <div class="form-group col-12">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-        </form>
-    </section>
+    <div class="container bg-secondary rounded py-3 px-5">
+        <section id="contato" class="container my-5 py-5">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm" action="" method="post" class="row g-3">
+                <div class="form-group col-md-6">
+                    <label for="name" class="form-label">Nome:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Digite o nome completo" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu melhor email" required>
+                </div>
+                <div class="form-group col-12">
+                    <label for="message" class="form-label">Mensagem:</label>
+                    <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="form-group col-12">
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </div>
 
     <!-- Rodapé -->
     <footer class="container py-4 border-top">
@@ -441,6 +444,13 @@
         $(document).ready(function() {
             $('#table1').DataTable();
             $('#table2').DataTable();
+        });
+    </script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Você não pode passar daqui');
         });
     </script>
 </body>

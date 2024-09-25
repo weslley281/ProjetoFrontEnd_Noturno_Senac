@@ -1,0 +1,6 @@
+#contato {
+    background-color: rgba(93, 207, 207, 0.4); /* Fundo branco com 80% de opacidade */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+}
+
+/* Garantir que o texto dentro da seção não seja afetado pela transparência */

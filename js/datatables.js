@@ -21460,7 +21460,7 @@ return jQuery;
 			 * Plural object for the data type the table is showing
 			 */
 			entries: {
-				_: "entries",
+				_: "entradas",
 				1: "entry"
 			},
 	
@@ -21545,7 +21545,7 @@ return jQuery;
 			 * with a default select list of 10, 25, 50 and 100, and can be replaced
 			 * with a custom select box if required.
 			 */
-			"sLengthMenu": "_MENU_ _ENTRIES_ per page",
+			"sLengthMenu": "_MENU_ _ENTRIES_ por pagina",
 	
 	
 			/**
@@ -21572,7 +21572,7 @@ return jQuery;
 			 * control over where it appears in the string. If "_INPUT_" is not given
 			 * then the input box is appended to the string automatically.
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Buscar:",
 	
 	
 			/**
